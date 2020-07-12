@@ -1,0 +1,16 @@
+.title
+  .title__header
+    MY TRUTH
+
+
+.contents
+  .contents__user
+    .contents__user-box
+      = current_user.name
+    .contents__user-group
+      .contents__user-group-box
+        tech camp 75期
+    .contents__form
+      = form_for"#" do |f|
+        = f.text_field :content, class:'user-search',placeholder: "user search"
+        = f.submit '検索',class: 'submit-btn'

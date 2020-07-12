@@ -1,0 +1,91 @@
+.title{
+  text-align: center;
+  &__header{
+    height: 60px;
+    background-color: white;
+    font-family: cursive;
+    line-height: 60px;
+    font-size: 50px;
+  }
+}
+
+
+.contents{
+  height: 50px;
+  background-color: red;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  &__user{
+    margin-left: 10px;
+    line-height: 50px;
+    width: 100%;
+    display: flex;
+    &-box{
+      width: 200px;
+      font-size: 25px;
+      color: white;
+    }
+    &-group{
+      width: 250px;
+      &-box{
+        font-size: 20px;
+        color: white;
+      }
+    }
+  }
+  &__form{
+    margin: auto;
+    margin-left: 80px;
+    .user-search{
+      height: 35px;
+      line-height: 50px;
+      width: 300px;
+      padding-left: 10px;
+      border-radius: 10px;
+    }
+    .submit-btn{
+      width: 40px;
+      height: 30px;
+      border-radius: 10px;
+    }
+  }
+}
+
+
+.main{
+  height: 665px;
+  width: 1200px;
+  background-color: pink;
+  margin: auto;
+}
+
+
+.menu{
+  height: calc(100vh - 775px);
+  background-color: crimson;
+  display: flex;
+  &__list{
+    margin: 0 auto;
+    padding-left: 100px;
+    line-height: calc(100vh - 775px);
+    font-size: 25px;
+    .icon-btn{
+      text-decoration: none;
+      color: black;
+      margin: 0 80px;
+    } 
+  }
+  &__user{
+    line-height: calc(100vh - 775px);
+    width: 100px;
+    text-align: center;
+    .user-btn{
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
+
+
+

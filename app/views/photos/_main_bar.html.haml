@@ -1,3 +1,8 @@
 .main
-  .main__eria
-    写真選択スペース
+  .main__space
+    .photo-btn
+      - @photos.each do |photo|
+        = link_to group_photo_path(current_user) do
+          = image_tag "#{photo.image}",height:"250px",width:"250px"
+
+

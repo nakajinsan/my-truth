@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_12_072736) do
+ActiveRecord::Schema.define(version: 2020_07_15_140752) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,22 @@ ActiveRecord::Schema.define(version: 2020_07_12_072736) do
     t.index ["name"], name: "index_groups_on_name", unique: true
   end
 
+  create_table "photos", force: :cascade do |t|
+    t.text "image", null: false
+    t.string "name", null: false
+    t.text "nated_food", null: false
+    t.text "dislike_word", null: false
+    t.text "hate_human", null: false
+    t.text "weaknes", null: false
+    t.text "remark", null: false
+    t.bigint "group_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["group_id"], name: "index_photos_on_group_id"
+    t.index ["user_id"], name: "index_photos_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", default: "", null: false
@@ -47,4 +63,6 @@ ActiveRecord::Schema.define(version: 2020_07_12_072736) do
 
   add_foreign_key "group_users", "groups"
   add_foreign_key "group_users", "users"
+  add_foreign_key "photos", "groups"
+  add_foreign_key "photos", "users"
 end

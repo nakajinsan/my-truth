@@ -1,8 +1,12 @@
 .main
-  .main__space
-    .photo-btn
-      - @photos.each do |photo|
-        = link_to group_photo_path(current_user) do
-          = image_tag "#{photo.image}",height:"250px",width:"250px"
-
-
+  .side
+    %a
+      グループ名
+    - current_user.groups.each do |group|
+      .group-list
+        = link_to group_photos_path(group) do
+          .group-list__box
+            = group.name
+  .photo__space
+    = render partial: 'photos/photo', collection: @photos
+    

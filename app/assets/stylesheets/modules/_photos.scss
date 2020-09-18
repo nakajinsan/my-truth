@@ -28,18 +28,13 @@
       width: 250px;
       &__box{
         font-size: 20px;
-        .group__name{
-          color: white;
-
-
-        }
+        color: white;
       }
     }
   }
   &__form{
     margin: 0 auto;
     width: 550px;
-    // margin-left: 80px;
     .user-search{
       height: 35px;
       line-height: 50px;
@@ -73,14 +68,23 @@ a{
 
 .main{
   height: 665px;
-  width: 1250px;
   background-color: lightblue;
-  margin: auto;
-  &__space{
-    width: 1250px;
-    .photo-btn{
-      display: block;
-      display: flex;
+  display: flex;
+  .side{
+    height: 665px;
+    width: 200px;
+    background-color: rgb(238, 175, 235);
+    text-align: center;
+    & a{
+      color: black;
+    }
+  }
+  .photo__space{
+    width: 100%;
+  
+    display: flex;
+    .photo{
+     
     }
   }
 }

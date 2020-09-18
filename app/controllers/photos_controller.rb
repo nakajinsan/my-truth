@@ -1,9 +1,10 @@
 class PhotosController < ApplicationController
-  before_action :set_group,only: [:index, :show, :create,:new]
-  before_action :set_photos,only: [:index, :show]
+  before_action :set_group
+  before_action :set_photos
   
   def index
-    @groups = Group.all
+    @groups = Group.new
+    @photos = @group.photos.includes(:user)
   end
 
   def new
@@ -13,9 +14,11 @@ class PhotosController < ApplicationController
   def create
     @photo = @group.photos.new(photo_params)
     if @photo.save
-      redirect_to root_path, notice: 'my truthを作成しました'
+      redirect_to group_photos_path(@group), notice: 'my truthを作成しました'
     else
-      render :new
+      @photos = @group.photos.includes(:user)
+      flash.now[:alert] = '入力してください。'
+      render :index
     end
   end
 

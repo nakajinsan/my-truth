@@ -1,5 +1,5 @@
 .photoImage
-  = @photo.image
+  = image_tag "#{@photo.image}",height:"250px",width:"250px"
 .photoContents
   = @photo.name
 .postAuthor

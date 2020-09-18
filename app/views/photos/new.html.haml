@@ -1,0 +1,15 @@
+
+.contents.row
+  .container
+    投稿する
+    = form_for [@group,@photo] do |form|
+      %h3
+        投稿する
+      = form.text_field :name, placeholder: "Nickname"
+      = form.file_field :image, placeholder: "Image Url"
+      = form.text_area :nated_food, placeholder: "嫌いな食べ物"
+      = form.text_area :dislike_word, placeholder: "嫌いな言葉"
+      = form.text_area :hate_human, placeholder: "嫌いな人間"
+      = form.text_area :weaknes, placeholder: "弱点"
+      = form.text_area :remark, placeholder: "意見"
+      = form.submit "SEND"

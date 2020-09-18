@@ -1,0 +1,11 @@
+.photoImage
+  = image_tag "#{@photo.image}",height:"250px",width:"250px"
+.photoContents
+  = @photo.name
+.postAuthor
+.postText
+  = simple_format @photo.nated_food
+  =@photo.hate_human
+  =@photo.dislike_word
+  =@photo.weaknes
+  =@photo.remark

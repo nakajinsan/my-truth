@@ -5,12 +5,17 @@
 
 .contents
   .contents__user
-    .contents__user-box
+    .contents__user__box
       = current_user.name
-    .contents__user-group
-      .contents__user-group-box
-        TECH CAMP 75期
+    .contents__user__group
+      .contents__user__group__box
+        = @group.name
+       
     .contents__form
       = form_for"#" do |f|
         = f.text_field :content, class:'user-search',placeholder: "user search"
         = f.submit '検索',class: 'submit-btn'
+    .contents__post
+      = link_to new_group_photo_path(@group),class:"post-btn" do
+        投稿する
+        

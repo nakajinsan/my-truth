@@ -15,28 +15,26 @@
   background-color: red;
   text-align: center;
   display: flex;
-  justify-content: space-between;
   &__user{
     margin-left: 10px;
     line-height: 50px;
-    width: 100%;
     display: flex;
-    &-box{
+    &__box{
       width: 200px;
       font-size: 25px;
       color: white;
     }
-    &-group{
+    &__group{
       width: 250px;
-      &-box{
+      &__box{
         font-size: 20px;
         color: white;
       }
     }
   }
   &__form{
-    margin: auto;
-    margin-left: 80px;
+    margin: 0 auto;
+    width: 550px;
     .user-search{
       height: 35px;
       line-height: 50px;
@@ -50,14 +48,45 @@
       border-radius: 10px;
     }
   }
+  &__post{
+    margin-left: 200px;
+    width: 100px;
+    .post-btn{
+      color: white;
+      text-decoration: none;
+      border: 2px solid white;
+      padding: 10px;
+    }
+  }
+}
+a{
+  text-decoration: none;
+
+
 }
 
 
 .main{
   height: 665px;
-  width: 1200px;
-  background-color: pink;
-  margin: auto;
+  background-color: lightblue;
+  display: flex;
+  .side{
+    height: 665px;
+    width: 200px;
+    background-color: rgb(238, 175, 235);
+    text-align: center;
+    & a{
+      color: black;
+    }
+  }
+  .photo__space{
+    width: 100%;
+  
+    display: flex;
+    .photo{
+     
+    }
+  }
 }
 
 
@@ -67,9 +96,10 @@
   display: flex;
   &__list{
     margin: 0 auto;
-    padding-left: 100px;
     line-height: calc(100vh - 775px);
     font-size: 25px;
+    display: flex;
+    margin-right: 140px;
     .icon-btn{
       text-decoration: none;
       color: black;
@@ -80,9 +110,10 @@
     line-height: calc(100vh - 775px);
     width: 100px;
     text-align: center;
+    margin-right: 100px;
     .user-btn{
       text-decoration: none;
-      color: black;
+      color: white;
     }
   }
 }

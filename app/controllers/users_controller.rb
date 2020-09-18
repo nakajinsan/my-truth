@@ -2,6 +2,12 @@ class UsersController < ApplicationController
   def edit
   end
 
+  def show
+    @user = User.find(params[:id])
+    user.save
+    redirect_to user_path(id: current_user)
+  end
+
 
   def update
     if current_user.update(user_params)

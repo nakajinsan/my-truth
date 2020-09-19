@@ -1,15 +1,51 @@
-
-.contents.row
+.wrapper
+  = render "groups/grouptop"
   .container
-    投稿する
     = form_for [@group,@photo] do |form|
-      %h3
-        投稿する
-      = form.text_field :name, placeholder: "Nickname"
-      = form.file_field :image, placeholder: "Image Url"
-      = form.text_area :nated_food, placeholder: "嫌いな食べ物"
-      = form.text_area :dislike_word, placeholder: "嫌いな言葉"
-      = form.text_area :hate_human, placeholder: "嫌いな人間"
-      = form.text_area :weaknes, placeholder: "弱点"
-      = form.text_area :remark, placeholder: "意見"
-      = form.submit "SEND"
+      .form_center
+        %p1 新規投稿
+        %br
+        %a ニックネーム：
+        %a{class: "condition"}必須
+        %br
+        = form.text_area :name, class: "text_space",placeholder: "ニックネーム"
+
+        %br
+        %a 変顔写真：
+        %a{class: "condition"}必須
+        %br
+        = form.file_field :image, class: "text_space",placeholder: "Image Url"
+
+        %br
+        %a 嫌いな食べ物：
+        %a{class: "condition"}必須
+        %br
+        = form.text_area :nated_food, class: "text_space",placeholder: "例：ニンジン"
+
+        %br
+        %a 嫌いな言葉：
+        %a{class: "condition"}必須
+        %br
+        = form.text_area :dislike_word, class: "text_space",placeholder: "例：あほ"
+
+        %br
+        %a 嫌いな人間：
+        %a{class: "condition"}必須
+        %br
+        = form.text_area :hate_human, class: "text_space",placeholder: "例：ケチなやつ"
+
+        %br
+        %a 弱点：
+        %a{class: "condition"}必須
+        %br
+        = form.text_area :weaknes, class: "text_space",placeholder: "例：脇腹"
+
+        %br
+        %a コメント：
+        %a{class: "condition"}必須
+        %br
+        = form.text_area :remark, class: "text_space",placeholder: "コメント"
+
+        %br
+        %br
+        = form.submit "SEND",class: "send_btn"

@@ -6,7 +6,8 @@
       .group-list
         = link_to group_photos_path(group) do
           .group-list__box 
-            = group.name
+            %p
+              = group.name
   .photo__space
     = render partial: 'photos/photo', collection: @photos
       

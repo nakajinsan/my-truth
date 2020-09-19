@@ -1,11 +1,45 @@
-.photoImage
-  = image_tag "#{@photo.image}",height:"250px",width:"250px"
-.photoContents
-  = @photo.name
-.postAuthor
-.postText
-  = simple_format @photo.nated_food
-  =@photo.hate_human
-  =@photo.dislike_word
-  =@photo.weaknes
-  =@photo.remark
+.title
+  .title__header
+    MY TRUTH
+.contents
+  .contents__user
+    .contents__user__box
+      = current_user.name
+    .contents__user__group
+      .contents__user__group__box
+        = @group.name
+
+.photo__space2
+  .card__space
+    .card__space__card
+      .photoImage
+        = image_tag "#{@photo.image}",height:"250px",width:"250px"
+      .photoContents
+        %a2　　名前：
+        = @photo.name
+      .postText
+        %a3
+          嫌いな食べ物：
+        %a3
+          =@photo.nated_food
+        %br
+        %br
+          %a3
+            嫌いな人間：
+          %a3
+            =@photo.hate_human
+        %br
+          %a3
+            嫌いな言葉：
+          %a3
+            =@photo.dislike_word
+        %br
+          %a3
+            弱点：
+          %a3
+            =@photo.weaknes
+        %br
+          %a3
+            コメント：
+          %a3
+            =@photo.remark

@@ -1,0 +1,27 @@
+.container{
+  margin: 30px 250px 0 250px; 
+  .form_center{
+    padding: 0 250px;
+    
+  }
+  & p1{
+    font-size: 20px;
+    background-color: pink;
+    align-items: center;
+  }
+  .condition{
+    background-color: red;
+    color: white;
+    border: 1px solid;
+    border-color: red;
+  }
+}
+.text_space{
+  width: 400px;
+} 
+.send_btn{
+  width: 400px;
+  height: 50px;
+  background-color: red;
+  color: white;
+}

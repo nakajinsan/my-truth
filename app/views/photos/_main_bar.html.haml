@@ -1,12 +1,12 @@
 .main
   .side
-    %a
+    .side__group
       グループ名
     - current_user.groups.each do |group|
       .group-list
         = link_to group_photos_path(group) do
-          .group-list__box
+          .group-list__box 
             = group.name
   .photo__space
     = render partial: 'photos/photo', collection: @photos
-    
+      

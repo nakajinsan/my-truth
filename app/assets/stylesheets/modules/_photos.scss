@@ -91,16 +91,17 @@ a{
   height: auto;
   width: 100%;
   display: flex;
+  overflow: scroll;
   .photo{
     position: relative;
     & p{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    text-decoration: none;
-    color: black;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      text-decoration: none;
+      color: black;
+    }
   }
-}
 }
 
 

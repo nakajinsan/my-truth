@@ -1,3 +1,11 @@
+.title
+  .title__header
+    MY TRUTH
+.contents
+  .contents__user
+    .contents__user__box
+      = current_user.name
+
 .chat-group-form
   %h1 チャットグループ編集
   = render partial: 'form', locals: { group: @group }

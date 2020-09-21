@@ -18,7 +18,7 @@ class PhotosController < ApplicationController
     else
       @photos = @group.photos.includes(:user)
       flash.now[:alert] = '入力してください。'
-      render :index
+      render :new
     end
   end
 

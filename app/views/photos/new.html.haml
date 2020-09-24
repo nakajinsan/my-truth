@@ -15,37 +15,27 @@
         %a{class: "condition"}必須
         %br
         = form.file_field :image, class: "text_space",placeholder: "Image Url"
-
         %br
         %a 嫌いな食べ物：
         %a{class: "condition"}必須
-        %br
         = form.text_area :nated_food, class: "text_space",placeholder: "例：ニンジン"
-
         %br
         %a 嫌いな言葉：
         %a{class: "condition"}必須
-        %br
         = form.text_area :dislike_word, class: "text_space",placeholder: "例：あほ"
-
         %br
         %a 嫌いな人間：
         %a{class: "condition"}必須
-        %br
         = form.text_area :hate_human, class: "text_space",placeholder: "例：ケチなやつ"
-
         %br
         %a 弱点：
         %a{class: "condition"}必須
-        %br
         = form.text_area :weaknes, class: "text_space",placeholder: "例：脇腹"
-
         %br
         %a コメント：
         %a{class: "condition"}必須
         %br
         = form.text_area :remark, class: "text_space",placeholder: "コメント"
-
         %br
         %br
         = form.submit "SEND",class: "send_btn"

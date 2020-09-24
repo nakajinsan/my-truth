@@ -69,9 +69,12 @@ a{
   display: flex;
   height: 665px;
   background-color: rgb(228, 199, 247);
+  word-break: break-all;
+
+
 }
 .side{
-  width: 200px;
+  width: 180px;
   background-color: rgb(217, 223, 144);
   text-align: center;
   &__group{
@@ -88,12 +91,14 @@ a{
   }
 }
 .photo__space{
-  height: auto;
-  width: 100%;
+  width: calc(100% - 180px);
   display: flex;
-  overflow: scroll;
+  
   .photo{
     position: relative;
+    word-break: break-word;
+
+
     & p{
       position: absolute;
       top: 10px;

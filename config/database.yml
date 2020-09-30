@@ -83,3 +83,6 @@ production:
   database: my-truth_production
   username: my-truth
   password: <%= ENV['MY-TRUTH_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5

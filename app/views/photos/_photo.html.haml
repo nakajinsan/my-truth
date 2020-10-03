@@ -1,7 +1,7 @@
 .photo{data: {photo: {id: photo.id}}}
   %a
     = link_to "photos/#{photo.id}",methos: :get do
-      = image_tag "#{photo.image}",height:"250px",width:"250px"
+      = image_tag "#{photo.image.url}",height:"250px",width:"250px"
       %p
         = photo.name
 

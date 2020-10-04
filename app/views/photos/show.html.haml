@@ -15,7 +15,7 @@
       .photoImage
         = image_tag "#{@photo.image}",height:"250px",width:"250px"
       .photoContents
-        %a2　　名前：
+        %a2 名前：
         = @photo.name
       .postText
         %a3
@@ -43,3 +43,6 @@
             コメント：
           %a3
             =@photo.remark
+    .truth__delete
+      = link_to group_photo_path, method: :delete, class:"delete_btn" do
+        削除する

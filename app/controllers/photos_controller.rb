@@ -1,6 +1,7 @@
 class PhotosController < ApplicationController
   before_action :set_group
   before_action :set_photos
+  before_action :set_photo, only:[:show, :destroy]
   
   def index
     @groups = Group.new
@@ -23,8 +24,13 @@ class PhotosController < ApplicationController
   end
 
   def show
-    @photo = Photo.find(params[:id])
   end
+
+  def destroy
+    @photo.destroy
+    redirect_to root_path,notice:'削除に成功しました'
+  end
+
 
   private
   def photo_params
@@ -39,4 +45,7 @@ class PhotosController < ApplicationController
     @photos = Photo.all
   end
 
+  def set_photo
+    @photo = Photo.find(params[:id])
+  end
 end

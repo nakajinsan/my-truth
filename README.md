@@ -71,13 +71,13 @@ Ruby、Ruby On Rails、PostgreSQL、Heroku
 ## phototsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image|text||
-|name|text||
-|nated_food|text||
-|dislike_word|text||
-|hate_human|text||
-|weaknes|text||
-|remark|text||
+|image|text|null: false|
+|name|text|null: false|
+|nated_food|text|null: false|
+|dislike_word|text|null: false|
+|hate_human|text|null: false|
+|weaknes|text|null: false|
+|remark|text|null: false|
 |group|references|null: false, foreign_key: true|
 |user|references|null: false, foreign_key: true|
 

@@ -59,12 +59,10 @@
     }
   }
 }
+
 a{
   text-decoration: none;
-
-
 }
-
 .main{
   display: flex;
   height: 665px;
@@ -87,18 +85,14 @@ a{
       color: black;
       text-decoration: none;
     }
-
   }
 }
 .photo__space{
   width: calc(100% - 160px);
   display: flex;
-  
   .photo{
     position: relative;
     word-break: break-word;
-
-
     & p{
       position: absolute;
       top: 10px;
@@ -108,11 +102,6 @@ a{
     }
   }
 }
-
-
-
-
-
 
 .menu{
   height: calc(100vh - 775px);
